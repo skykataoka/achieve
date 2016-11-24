@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+<p><%= notice %></p>
+
+<h1>お問い合わせページ</h1>
+
+<%= form_for(@contact, url:confirm_contacts_path) do |f| %>
+
+ <% if @contact.errors.any? %>
+    <div id="error_explanation">
+
+      <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
+
+      <ul>
+
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, class: 'form-control' %>
+    <br>
+    
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control'  %>
+    <br>
+    
+    <%= f.label :お問い合わせ内容 %>
+    <%= f.text_field :content, class: 'form-control'  %>
+    <br>
+    <br>
+    <br>
+    <%= f.submit :送信する, class: 'btn btn-primary btn-block' %>
+    
+<% end %>
+
+
+<%= link_to "ブログに戻る" ,blogs_path , class: 'btn btn-default btn-block' %>
+
+  </div>
+</div>
+
