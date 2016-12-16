@@ -1,8 +1,10 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_blog, only:[:edit, :update, :destroy]
   
   def index
     @blogs = Blog.all
+    # binding.pry
   end
   
   def new
@@ -22,7 +24,6 @@ class BlogsController < ApplicationController
      @blog = Blog.new(blogs_params)
      if @blog.save
        redirect_to blogs_path, notice: "ブログを作成しました!"
-     
      else
        render 'new'
      end
@@ -58,7 +59,9 @@ class BlogsController < ApplicationController
     # @blog = Blog.find(params[:id]) 冒頭でファクタリング化
     # 当該IDデータをfindしてきた後、destroyメソッドで削除する。
     @blog.destroy
-    redirect_to blogs_path, notice: "ブログを削除しました!"
+    @blogs = Blog.all
+    # redirect_to blogs_path, notice: "ブログを削除しました!"
+    render 'index'
   end
   
   

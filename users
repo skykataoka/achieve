@@ -1,0 +1,60 @@
+\d
+\q
+\?
+drop table blogs
+\d
+drop_table(:blogs)
+\d
+drop table blogs
+\d
+DROP TABLE blogs
+\q
+\d
+\ｑ
+\ｑ
+\q
+\d
+\q
+\d
+\q
+SELECT "id:1".* FROM "blogs";
+\q
+e
+show db
+quit
+q
+show database
+;
+show databases;
+SHOW DATABASES;
+h;
+h
+\h
+SHOW DATABASES;
+SHOW DATABASES;
+SHOW DATABASES;
+SHOW DATABASES;
+q;
+quit;
+quit
+quit
+quit;
+q;
+\q
+SHOW DATABASES;
+psql -l 
+;
+psql -l
+psql -l ;
+psql;
+rake db:migrate
+;
+HOW DATABASES;
+show datgabases;
+SHOW DATABASES;
+quit
+;
+\q
+\d
+\?
+\s users
