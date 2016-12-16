@@ -10,7 +10,7 @@
         <h4><strong><%= blog.title %></strong></h4>
         <p>本文:<%= blog.content %></p>
         <%= link_to "編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-default btn-sm btn-success' %>
-        <%= link_to "削除する", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger' %>
+        <%= link_to "削除する", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn-danger' %>
       </div>
       
       <% end %>
