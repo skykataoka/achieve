@@ -6,14 +6,11 @@
 
      <% if @contact.errors.any? %>
         <div id="error_explanation">
-    
           <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
-    
           <ul>
-    
-          <% @contact.errors.full_messages.each do |msg| %>
+            <% @contact.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
-          <% end %>
+            <% end %>
           </ul>
         </div>
      <% end %>
@@ -26,7 +23,7 @@
     <p>email:<%= @contact.email %></p>
     <p>本文:<%= @contact.content %></p>
     <%= f.submit :"送信する", class: 'btn btn-primary btn-block' %>
-    
+
 <% end %>
 
 

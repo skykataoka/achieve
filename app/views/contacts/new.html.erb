@@ -8,14 +8,11 @@
 
  <% if @contact.errors.any? %>
     <div id="error_explanation">
-
       <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
-
       <ul>
-
-      <% @contact.errors.full_messages.each do |msg| %>
+        <% @contact.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -26,18 +23,18 @@
     <%= f.label :タイトル %>
     <%= f.text_field :title, class: 'form-control' %>
     <br>
-    
+
     <%= f.label :email %>
     <%= f.text_field :email, class: 'form-control'  %>
     <br>
-    
+
     <%= f.label :お問い合わせ内容 %>
     <%= f.text_field :content, class: 'form-control'  %>
     <br>
     <br>
     <br>
     <%= f.submit :送信する, class: 'btn btn-primary btn-block' %>
-    
+
 <% end %>
 
 
@@ -45,4 +42,3 @@
 
   </div>
 </div>
-
