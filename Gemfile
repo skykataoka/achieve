@@ -38,6 +38,8 @@ gem 'jquery-turbolinks'
 gem 'rails_12factor', group: :production
 gem 'pry-rails'
 gem 'devise'
+gem 'rails_admin'
+gem 'cancan'
 
 
 
