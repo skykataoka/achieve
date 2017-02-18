@@ -1,0 +1,7 @@
+<% @poems.each do |poem| %>
+<ul>
+  <li>タイトル:<%= poem.title %></li>
+  <li>ポエム:<%= poem.content %></li>
+</ul>
+<%= link_to "詳細を見る", poem_path(poem.id), class: 'btn btn-default btn-sm btn-danger' %>
+<% end %>

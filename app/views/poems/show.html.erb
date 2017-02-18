@@ -1,0 +1,9 @@
+<% @poem %>
+<ul>
+  <li>ID:<%= @poem.id %></li>
+  <li>タイトル:<%= @poem.title %></li>
+  <li>ポエム:<%= @poem.content %></li>
+  <li>作成日時:<%= Date.parse(@poem.created_at).strftime("%Y-%m-%d") %></li>
+  <li>更新日時:<%= Date.parse(@poem.updated_at).strftime("%Y-%m-%d") %></li>
+</ul>
+<%= link_to "戻る", poems_path, class: 'btn btn-default btn-sm btn-danger' %>

@@ -11,16 +11,19 @@ Rails.application.routes.draw do
       end
   end
 
-  resources:contacts, only: [:new, :create] do
+  resources :contacts, only: [:new, :create] do
       collection do
         post :confirm
       end
   end
 
+  resources :poems, only: [:index, :show] do
+  end
+
   if Rails.env.development?
   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
-  
+
   # root 'コントローラ名#アクション名' で最初に表示するページを定義できる。
 
   # The priority is based upon order of creation: first created -> highest priority.

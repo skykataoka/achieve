@@ -33,7 +33,6 @@ class BlogsController < ApplicationController
     # redirect_to blogs_path, notice: "ブログを作成しました!"
   end
 
-
   def edit
     @blog.user_id = current_user.id
     # @blog = Blog.find(params[:id]) 冒頭でファクタリング化
