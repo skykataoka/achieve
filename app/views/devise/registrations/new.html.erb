@@ -16,7 +16,7 @@
 
       <div class="field">
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <span>(パスワードは<%= @minimum_password_length %> 文字以上で設定してください)</span>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "パスワード" %>
       </div>
