@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'top#index'
 
@@ -7,8 +8,9 @@ Rails.application.routes.draw do
   registrations: "users/registrations",
   omniauth_callbacks: "users/omniauth_callbacks"
 }
-
-  resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
+  #blogsの1段階下のURL階層にコメントを設定
+  resources :blogs do
+    resources :comments
       collection do
         post :confirm
       end
