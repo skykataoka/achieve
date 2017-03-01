@@ -1,0 +1,18 @@
+<div class="container">
+      <div class="col-md-12 col-sm-4 col-xs-6 ">
+        <div class="user-img">
+         <%= profile_img(@user) %>
+        </div>
+        <p>おなまえ:<%= @user.name %></P>
+        <p>登録番号:<%= @user.id %></p>
+        <p>アドレス:<%= @user.email %></p>
+        <p>連携中のアカウント:<%= @user.provider %></p>
+        <p>登録日:<%= @user.created_at %></p>
+        <hr>
+      </div>
+
+      <%= render 'followed' %>
+      <hr>
+      <%= render 'follower' %>
+
+</div>
