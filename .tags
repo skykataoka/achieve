@@ -1,0 +1,9 @@
+CreateNotifications	/Users/skykataoka/dic/achieve/db/migrate/20170410080907_create_notifications.rb	/^class CreateNotifications < ActiveRecord::Migration$/;"	class	line:1
+change	/Users/skykataoka/dic/achieve/db/migrate/20170410080907_create_notifications.rb	/^  def change$/;"	method	line:2	class:CreateNotifications
+Comment	/Users/skykataoka/dic/achieve/app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	class	line:1
+CommentsController	/Users/skykataoka/dic/achieve/app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	class	line:1
+create	/Users/skykataoka/dic/achieve/app/controllers/comments_controller.rb	/^  def create$/;"	method	line:3	class:CommentsController
+destroy	/Users/skykataoka/dic/achieve/app/controllers/comments_controller.rb	/^  def destroy$/;"	method	line:29	class:CommentsController
+comment_params	/Users/skykataoka/dic/achieve/app/controllers/comments_controller.rb	/^    def comment_params$/;"	method	line:51	class:CommentsController
+NotificationsController	/Users/skykataoka/dic/achieve/app/controllers/notifications_controller.rb	/^class NotificationsController < ApplicationController$/;"	class	line:1
+index	/Users/skykataoka/dic/achieve/app/controllers/notifications_controller.rb	/^  def index$/;"	method	line:4	class:NotificationsController
