@@ -17,11 +17,12 @@ class User < ActiveRecord::Base
   has_many :followers, through: :reverse_relationships, source: :follower
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
-  if auth.info.email
-    user = User.find_by(email: auth.info.email)
-  # email認証できなかった場合に一意の適当なメールアドレスをつくる処理。facebookでは電話番号登録しているひとがいるため
-  else
-    user = User.find_by(email: "#{auth.uid}-#{auth.provider}@example.com"
+    if auth.info.email
+      user = User.find_by(email: auth.info.email)
+    # email認証できなかった場合に一意の適当なメールアドレスをつくる処理。facebookでは電話番号登録しているひとがいるため
+    else
+      user = User.find_by(email: "#{auth.uid}-#{auth.provider}@example.com"
+    end
   end
 
     unless user
