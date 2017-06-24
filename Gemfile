@@ -67,6 +67,7 @@ group :development, :test do
   gem 'faker'
   gem 'letter_opener_web'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'capistrano', '3.6.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
